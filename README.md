@@ -1,7 +1,7 @@
 # Behavioral Portfolio Optimization
 ### Markowitz Meets Kahneman & Tversky
 
-*A quantitative research project — prepared for the Amundi Investment Institute alternance application (Research: Investor Intelligence & Academic Partnerships)*
+*A quantitative research project prepared for my Behavorial Finance course*
 
 ---
 
@@ -148,5 +148,5 @@ python main.py
 
 ---
 
-*Author: [Your Name] — [School] — [Year]*  
-*Contact: [email]*
+*Author: Thomas FANGET — Paris II Panthéon Assas — 2025-2026*  
+*Contact: thomas@fanget.net*
