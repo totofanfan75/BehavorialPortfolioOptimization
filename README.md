@@ -1,7 +1,7 @@
 # Behavioral Portfolio Optimization
 ### Markowitz Meets Kahneman & Tversky
 
-*A quantitative research project prepared for my Behavorial Finance course*
+*A quantitative research project prepared for my Behaviorial Finance course*
 
 ---
 
@@ -122,7 +122,7 @@ A grid of λ ∈ [1, 5] traces the *behavioral efficient frontier*: how allocati
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/portfolio-behavioral
+git clone https://github.com/totofanfan75/BehavioralPortfolioOptimization
 cd portfolio-behavioral
 pip install -r requirements.txt
 python main.py
