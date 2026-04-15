@@ -1,5 +1,5 @@
 """
-optimization.py — Mean-variance and behavioral (Prospect Theory) portfolio optimizers.
+optimization.py : Mean-variance and behavioral (Prospect Theory) portfolio optimizers.
 
 Two optimization paradigms are implemented side-by-side:
   1. Classical Markowitz (1952): maximise E[r] / sigma   subject to w >= 0, sum(w)=1
