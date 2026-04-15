@@ -9,15 +9,14 @@
 
 This project implements and compares **two paradigms of portfolio optimization**:
 
-1. **Classical Mean-Variance (Markowitz, 1952)** — the rational investor maximises Sharpe ratio
-2. **Prospect Theory (Kahneman & Tversky, 1979)** — the behavioral investor maximises expected prospect value with asymmetric loss aversion
+1. **Classical Mean-Variance (Markowitz, 1952)** : the rational investor maximises Sharpe ratio
+2. **Prospect Theory (Kahneman & Tversky, 1979)** : the behavioral investor maximises expected prospect value with asymmetric loss aversion
 
 The core research questions are:
 
 > *What is the long-run performance cost of loss aversion?*
 > *Does the Myopic Loss Aversion effect (Thaler et al., 1997) hold in a diversified multi-asset setting?*
 
-These questions sit at the heart of Amundi's Investor Intelligence research agenda (Bianchi & Brière, WP150, 2024).
 
 ---
 
@@ -100,9 +99,9 @@ with 10,000 paths per portfolio. Cholesky decomposition preserves the empirical 
 
 ### 5. Risk Metrics
 
-- **CVaR (Expected Shortfall)**: average return in the worst 5% scenarios — a coherent risk measure (Artzner et al., 1999)
-- **P(ruin)**: probability of ending with less than initial capital
-- **Median CAGR**: geometric mean return from the median terminal wealth
+- **CVaR (Expected Shortfall)**: average return in the worst 5% scenarios which I considered a coherent risk measure (Artzner et al., 1999)
+- **P(ruin)**: probability of ending with less than initial capital.
+- **Median CAGR**: geometric mean return from the median terminal wealth.
 
 ### 6. Lambda Sensitivity Analysis
 
@@ -110,17 +109,13 @@ A grid of λ ∈ [1, 5] traces the *behavioral efficient frontier*: how allocati
 
 ---
 
-## What Is Original in This Project?
-
-This project is **applied research**, not fundamental discovery. Markowitz (1952), Kahneman & Tversky (1979), and Thaler et al. (1997) are all 20th-century results. The contribution here is:
-
-1. **Empirical combination**: integrating Prospect Theory *directly into the optimizer* (not just describing it) with real multi-asset data (2010–2025 including COVID, rate cycle).
-
-2. **The lambda sensitivity + CVaR panel (Fig. 3, Panel C)**: quantifying the *paradox* that higher loss aversion does not reduce long-run CVaR — a result relevant for the design of investor nudges and default options.
-
-3. **Myopic Loss Aversion in a multi-asset setting**: Thaler et al. (1997) used a simplified two-asset setup. The replication here uses 7 assets and a full covariance structure, making the results more directly applicable to wealth management practice.
-
-4. **Direct link to robo-advice research**: the welfare cost of behavioral bias (~30% terminal wealth) provides a quantitative rationale for the type of robo-advisory intervention studied by Bianchi & Brière (WP150, 2024).
+## Limitations and Areas for Improvement
+- Returns are assumed to be Gaussian: adding heavy tails (Student's t-distribution) 
+  would be more realistic, particularly during periods of crisis.
+- The reference point in Prospect Theory is set at the initial capital; 
+  in practice, it evolves with recent levels (Barberis, 2013).
+- The sensitivity analysis on λ could be extended to α to explore 
+  the effect of diminishing sensitivity independently of loss aversion..
 
 ---
 
@@ -148,5 +143,5 @@ python main.py
 
 ---
 
-*Author: Thomas FANGET — Paris II Panthéon Assas — 2025-2026*  
+*Author: Thomas FANGET - Paris II Panthéon Assas - 2025-2026*  
 *Contact: thomas@fanget.net*
