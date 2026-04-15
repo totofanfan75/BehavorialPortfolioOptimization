@@ -289,7 +289,7 @@ def myopic_loss_aversion(
 
     Key finding: investors who evaluate their portfolio more frequently
     allocate less to risky assets, because short windows contain more
-    visible losses — even if long-run expected returns are identical.
+    visible losses - even if long-run expected returns are identical.
 
     For each horizon h (in months), we:
       1. Generate fresh shocks of length h (different seed per horizon).
@@ -298,7 +298,7 @@ def myopic_loss_aversion(
 
     The seed is varied across horizons intentionally: if we fixed the seed,
     a 3-month horizon would see the same first 3 months as the 1-month horizon,
-    making the results correlated in a spurious way.
+    making the results correlated in a "fallacious" way.
     """
     mu_m = (mu.values / 12).astype(float)
     L = np.linalg.cholesky((Sigma.values / 12).astype(float))
