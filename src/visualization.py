@@ -1,9 +1,8 @@
 """
-visualization.py — Publication-quality figures for the behavioral portfolio project.
+visualization.py : Figures for the project.
 
 All figures are designed to be self-contained (no global state) and are saved
-to an output directory. Each function returns the matplotlib Figure object
-so it can also be used interactively in Jupyter notebooks.
+to an output directory..
 """
 
 import numpy as np
