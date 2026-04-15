@@ -1,5 +1,5 @@
 """
-data.py — Asset universe loading and preprocessing.
+data.py : Asset universe loading and preprocessing.
 
 Downloads monthly log-returns for a diversified 7-asset universe
 via yfinance. Falls back to reproducible synthetic data if offline.
