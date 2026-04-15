@@ -1,5 +1,5 @@
 """
-main.py — Entry point for the Behavioral Portfolio Optimization project.
+main.py : Entry point for the Behavioral Portfolio Optimization project.
 
 Run:
     python main.py
@@ -11,7 +11,7 @@ Project structure
     src/data.py          — data loading and preprocessing
     src/optimization.py  — Markowitz + Prospect Theory optimizers
     src/simulation.py    — Monte Carlo engine and risk metrics
-    src/visualization.py — publication-quality figures
+    src/visualization.py — figures
 
 Research questions addressed
 -----------------------------
@@ -136,7 +136,7 @@ metrics_df = pd.DataFrame(rows, index=list(sim_results.keys()))
 metrics_df.to_csv(OUT_DIR / "risk_metrics.csv")
 
 # ===========================================================================
-# 5. SENSITIVITY ANALYSIS — LAMBDA
+# 5. SENSITIVITY ANALYSIS - LAMBDA
 # ===========================================================================
 print("\n" + "=" * 65)
 print("STEP 5 — Lambda Sensitivity Analysis")
@@ -221,15 +221,11 @@ Median terminal wealth (20-year horizon, 10,000 simulations):
   → Wealth cost of behavioral bias: {cost_pct:.1f}% of terminal wealth
     lost relative to the rational benchmark.
 
-Interpretation (Brière & Bianchi, 2024 — link to Amundi research):
+Interpretation:
   The Prospect Theory investor under-allocates to equities due to loss aversion,
   which generates a significant drag on long-run compounding. This validates the
   rationale for robo-advisory tools that override short-term loss aversion and
-  maintain a diversified equity exposure — consistent with the findings of the
-  Amundi Investment Institute (Bianchi & Brière, WP150, 2024).
-
-  Open question: at what lambda value does the behavioral portfolio become
-  genuinely superior on a risk-adjusted basis? (See Panel C, Fig. 3.)
+  maintain a diversified equity exposure.
 
 All outputs saved to: {OUT_DIR.resolve()}
 """)
