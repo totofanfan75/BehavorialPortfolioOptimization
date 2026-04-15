@@ -1,5 +1,5 @@
 """
-simulation.py — Monte Carlo engine and risk metrics.
+simulation.py : Monte Carlo engine and risk metrics.
 
 Provides vectorised GBM simulation and a suite of risk measures
 relevant to long-term asset management.
